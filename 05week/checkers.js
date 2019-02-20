@@ -8,8 +8,38 @@ const rl = readline.createInterface({
 });
 
 
+/*
+blackStartSpots = [01,03,05,07,10,12,14,16,21,23,25,27];
+redStartSpots = [50,52,54,56,61,63,65,67,70,72,74,76];
+*/
+
 function Checker() {
   // Your code here
+}
+
+function moveChecker (startPosition, endPosition){
+  //split startPosition into two numbers in an array, take those numbers and put them into board.grid to get the start position
+  startPosition = startPosition.split('');
+  startPosition = board.grid[startPosition[0]],[startPosition[1]];
+  //split endPosition into two numbers in an array, take those numbers and put them into board.gird to get the end position
+  endPosition = endPosition.split('');
+  endPosition = board.grid[startPosition[0],[startPosition[1]]];
+  //check to make sure there is a checker on the startSpot
+  if(startPosition == checker){
+    //check to see what color the checker is
+    if(checker == black){
+      if(endPosition = legal){
+        //move to end spot 
+      }else if (checker == king) {
+        //
+      } else {
+        return 'This is not a legal move'
+      }
+
+  } else {
+    return 'There is not a checker on the spot you want to me moved'
+  }
+
 }
 
 class Board {
@@ -23,7 +53,7 @@ class Board {
       this.grid[row] = [];
       // push in 8 columns of nulls
       for (let column = 0; column < 8; column++) {
-        this.grid[row].push(null);
+        this.grid[row].push();
       }
     }
   }
@@ -108,4 +138,5 @@ if (typeof describe === 'function') {
   });
 } else {
   getPrompt();
-}
+}}
+ 
