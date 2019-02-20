@@ -129,5 +129,6 @@ const idealTemp = weather
     })
     .map(function(weather){
         return weather.id
-    })
+    }) 
+
 console.log(idealTemp)
