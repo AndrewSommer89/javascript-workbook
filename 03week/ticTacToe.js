@@ -24,23 +24,42 @@ function printBoard() {
 }
 
 function horizontalWin() {
-  // Your code here
+  // checcks all horizontal possibilites; 
+  if ((board[0][0] == playerTurn && board[0][1] == playerTurn && board[0][2] == playerTurn)||(board[0][1] == playerTurn && board[1][1] == playerTurn && board[2][1] == playTurn) || (board[0][2] == playerTurn && board[1][2] == playerTurn && board[2][2] == playerTurn)){
+    return true;
+  } else {
+    return false
+  };
 }
-
 function verticalWin() {
-  // Your code here
+  // checcks all vertical possibilites;
+  if ((board[0][0] == playerTurn && board[1][0] == playerTurn && board[2][0] == playerTurn)||(board[1][0] == playerTurn && board[1][1] == playerTurn && board[1][2] == playTurn) || (board[2][0] == playerTurn && board[2][1] == playerTurn && board[2][2] == playerTurn)){
+    return true;
+  } else {
+    return false
+  };
 }
 
 function diagonalWin() {
-  // Your code here
+  // checcks all diagonal possibilites;
+  if ((board[0][0] == playerTurn && board[1][1] == playerTurn && board[2][2] == playerTurn)||(board[0][2] == playerTurn && board[1][1] == playerTurn && board[0][2] == playTurn)){
+    return true;
+  } else {
+    return false
+  };
 }
 
 function checkForWin() {
-  // Your code here
+  // checks to see if vertical,diagnol, horizointal win is true; if any are true checkForWin returns true
+  if (diagonalWin()||verticalWin()||horizontalWin()){
+    return true;
+  } else {
+    return false;
+  }
 }
 
 function ticTacToe(row, column) {
-  // Your code here
+  // not sure what to do here will ask in class;
 }
 
 function getPrompt() {
@@ -52,7 +71,6 @@ function getPrompt() {
       getPrompt();
     });
   });
-
 }
 
 
@@ -91,3 +109,4 @@ if (typeof describe === 'function') {
   getPrompt();
 
 }
+printBoard();
